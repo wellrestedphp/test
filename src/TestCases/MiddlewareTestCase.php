@@ -6,7 +6,6 @@ use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\MiddlewareInterface;
-use Psr\Http\Server\RequestHandlerInterface;
 use WellRESTed\Message\ServerRequest;
 use WellRESTed\Test\Doubles\HandlerDouble;
 
@@ -14,7 +13,7 @@ abstract class MiddlewareTestCase extends TestCase
 {
     /** @var ServerRequestInterface */
     protected $request;
-    /** @var RequestHandlerInterface */
+    /** @var HandlerDouble */
     protected $handler;
 
     public function setUp()
