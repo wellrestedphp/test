@@ -18,10 +18,10 @@ use WellRESTed\Test\TestCases\RequestHandlerTestCase;
 
 class MyHandlerTest extends RequestHandlerTestCase
 {
-  public function setUp()
+  public function setUp(): void
   {
     parent::setUp();
-    
+
     // Configure the default request.
     $this->request = $this->request
       ->withAttribute('id', 12345);
@@ -56,10 +56,10 @@ use WellRESTed\Test\TestCases\MiddlewareTestCase;
 
 class MyMiddlewareTest extends MiddlewareTestCase
 {
-  public function setUp()
+  public function setUp(): void
   {
     parent::setUp();
-    
+
     // Configure the default request.
     $this->request = $this->request
       ->withAttribute('id', 12345);
@@ -77,7 +77,7 @@ class MyMiddlewareTest extends MiddlewareTestCase
 
   public function testDelegatesToUpstreamHandler()
   {
-    // Call `dispatch` to send the request to the middleware under test and 
+    // Call `dispatch` to send the request to the middleware under test and
     // return the response.
     $response = $this->dispatch();
 
@@ -101,10 +101,10 @@ To test classes implementing the legacy [`WellRESTed\MiddlewareInterface`](https
 
 class MyLegacyMiddlewareTest extends LegacyMiddlewareTestCase
 {
-  public function setUp()
+  public function setUp(): void
   {
     parent::setUp();
-    
+
     // Configure the default request.
     $this->request = $this->request
       ->withAttribute('id', 12345);
@@ -121,7 +121,7 @@ class MyLegacyMiddlewareTest extends LegacyMiddlewareTestCase
 
   public function testDelegatesToNext()
   {
-    // Call `dispatch` to send the request to the middleware under test and 
+    // Call `dispatch` to send the request to the middleware under test and
     // return the response.
     $response = $this->dispatch();
 
