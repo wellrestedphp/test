@@ -13,7 +13,7 @@ abstract class RequestHandlerTestCase extends TestCase
     /** @var ServerRequestInterface */
     protected $request;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         $this->request = new ServerRequest();
