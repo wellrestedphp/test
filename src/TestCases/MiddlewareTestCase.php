@@ -16,7 +16,7 @@ abstract class MiddlewareTestCase extends TestCase
     /** @var HandlerDouble */
     protected $handler;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         parent::setUp();
         $this->request = new ServerRequest();

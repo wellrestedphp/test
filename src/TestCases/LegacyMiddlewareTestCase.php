@@ -18,7 +18,7 @@ abstract class LegacyMiddlewareTestCase extends TestCase
     /** @var NextDouble */
     protected $next;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         parent::setUp();
         $this->request = new ServerRequest();
